@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com validação</title>
+</head>
+<body>
+    <p>
+        <label for="ca">Campo A: </label>
+        <input type="number" name="#" id="ca">
+    </p>
+    <p>
+        <label for="cb">Campo B: </label>
+        <input type="number" name="#" id="cb">
+    </p>
+    <input type="button" value="Enviar" onclick="enviar()">
+    <p id="res">Resultado</p>
+
+    <script>
+        function enviar(){
+            var c2 = document.getElementById('cb')
+            var c1 = document.getElementById('ca')
+            var c22 = Number(c2.value)
+            var c11 = Number(c1.value)
+            var res = window.document.getElementById('res')
+            if(c22 > c11){
+                res.innerHTML = `Formulário <strong>válido</strong>!`
+            } else{
+                res.innerHTML = `Formulário <strong>inválido</strong>!`
+            }
+        }
+    </script>
+</body>
+</html>
